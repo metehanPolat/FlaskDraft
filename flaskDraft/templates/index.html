@@ -1,0 +1,25 @@
+{% extends "lyout.html" %}
+
+
+
+{% block body %}
+<div class="jumbotron text-center">
+<h3>Hoş Geldiniz</h3>
+</div>
+
+{% if islem == 1 %}
+<p>Evet</p>
+{% elif islem == 2 %}
+<p>Evet</p>
+{% else %}
+<p>Hayır</p>
+{% endif %}
+
+<ul>
+{% for number in numbers %}
+<li>{{number}} </li>
+{% endfor %}
+</ul>
+
+{% endblock  %}
+

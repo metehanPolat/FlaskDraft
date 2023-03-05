@@ -1,0 +1,23 @@
+{% extends "lyout.html" %}
+
+
+{% block body %}
+{% if article %}
+
+<h4>{{article.title}}</h4>
+<hr>
+
+Yazar : {{article.author}}
+
+<hr>
+Tarih : {{article.created_date}}
+<hr>
+{{article.content|safe}} <!-- '|safe' kodu sayesinde html olarak kaydedilen yazı html kodu olarak işlenebiliyor-->
+<hr>
+
+{% else %}
+<div class="alert alert-warning">
+    Böyle bir makale bulunmamakta...
+</div>
+{% endif %}
+{% endblock body %}
